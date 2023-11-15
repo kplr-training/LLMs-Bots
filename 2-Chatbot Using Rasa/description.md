@@ -1,24 +1,45 @@
 in cmd :
+
 rasa init
+
 hit enter + timezoneboot (or any chatbot name) + yes + yes ...
+
 talk with the chatbot
+
 /stop
+
 code . (to open vs code) 
+
 in vs code, go to data > nlu.md
+
 notice that there's a set of expressions for greeting, moods etc.
+
 go back to cmd :
+
 cd timezonebot
+
 rasa shell
+
 try entering a sentence that we know from the training data (exists in nlu file)
+
 try similar intent sentence that doesn't exist to challenge the bot
+
 /stop
+
 rasa shell nlu (to load nlu model)
+
 are you a bot?
+
 notice that the response is json with intent and % of coonfidence about nwhat the user is talking about, and shows the confidence that the language understunding has of all the intents
+
 ctrl + c to quit
+
 in vs code, go to domain.yml file, notice that all the intents and the responses are listed here, it's also a place to define an actions, slots and entities
+
 g to data folder > stories.md
+
 stories file define potebtial conversation flows between the user and the chatbot, it uses utter_so	mething. This is what the chatbot expects conversations ti be like.
+
 
 go to nlu.md, get rid of all the default intents, only keep greeting and goodbye
 paste this instead:
