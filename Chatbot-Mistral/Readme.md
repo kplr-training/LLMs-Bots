@@ -3,13 +3,27 @@
 ![image](https://github.com/kplr-training/LLMs-Bots/assets/123749462/09abd3ef-94a3-47eb-b1ea-548f8bfca7ab)
 
 
-## Prerequisites
+## Setup with Docker :
+
+- Build the Docker Image:
+```
+docker buildx build --platform=linux/amd64 -t local-llm:v1 .
+```
+This command uses the docker buildx extension to build a Docker image (local-llm:v1) from the current directory (.) for the linux/amd64 platform.
+
+- Run the Docker Container:
+```
+docker run -p 8503:8503 local-llm:v1
+```
+This command runs a Docker container from the local-llm:v1 image, and it maps port 8503 from the host to port 8503 in the container (-p 8503:8503).
+
+## Setup without Docker
+
+### Prerequisites
 
 To run this code, make sure you have the following prerequisites installed:
 
 - Python version 3.11
-
-## Setup
 
 - Follow the steps below to set up and run the code:
 
@@ -43,3 +57,5 @@ pip install -r requirements.txt
 ```bash
 streamlit run main.py
 ```
+
+
