@@ -50,7 +50,7 @@ python -m pip install --upgrade pip
 ```bash
 pip install -r requirements.txt
 ```
-## Running the Application
+### Running the Application
 
 - After completing the setup, run the following command to start the application:
 
